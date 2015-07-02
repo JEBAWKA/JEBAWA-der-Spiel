@@ -1,0 +1,49 @@
+JBWA DER SPIEL 1
+NOTY PROJEKTOWE 0
+Mikołaj Halber
+
+
+ŚWIAT
+Europa, jak na mapie przedstawionej, podział na huby w których odbywa się 
+handel, wymiana towaru, spotykanie NPCów i dostawanie questów związanych z podróżą. 
+Również w hubach można wybrać do którego huba chce się pójść(np.dalej iść w 
+podróż do Jerozolimy, bądź też powrót do wcześniejszego hubu.
+Również istnieje podział na kraje, który wpływa na przygody na drodze
+np. w Polsce panuje ogólnie lekki akap i lekki antysemityzm,
+dlatego są niskie szanse(5% każdego dnia podróży)na spotkanie na drodze handlarzy lub antysemitów.
+Określi się odległości między hubami, i 1 dzień podróży to jakieś 30-50 km w zależności od
+umiejętności, i konia lub statku kupionego w wenecji, bądź konstynanopolu. (do ustalenia)
+MECHANIKA
+Gra rozpoczyna się od tworzenia postaci, imię do napisać(można zaimpletować jakiś funky
+generator imion), 
+BAZA 100:
+Wiek: 
+15 - 0, za każdy więcej +1(postać starsza ma większe szanse na choroby, a potem nawet śmierć)
+Umięjętności:
+umiejętność handlu, wpływa na targowanie(do późniejszego ustalenia procentowe wpływy, póki co wpływ na bazę==dwukrotność współczynnika procentowego
++20 - ŻAŁOSNY(płacisz 110% ceny) 
+0   - ZEROWY(płacisz 100% ceny)
+-10 - słaby (płacisz 95% ceny) 
+-30 - średni(płacisz 85% ceny) 
+-50 - dobry(płacisz 75% ceny) 
+-80 - świetny(płacisz 60% ceny) 
+-100 - mistrz(płacisz 50% ceny) 
+-300 - BÓG(wszystko za darmo)
+umiejętności rozwija się za pomocą eventów(np. udane targowanie to -20 do handlu)
+z tą bazą możemy zrobić umiejętności typu handlowe
+co do przeżycia to statsy zdrowia
+rzuty kostką 1k100 co dzień na zachorowanie, każda droga, będzie miała swoją bazę
+szansa na zachorowanie równa się baza+odporność
++20 - chorowity jak szopen
+0 - odporny jak przeciętny żyd
+-30 - odporny jak witold pilecki
+-50 - odporny jak jerzy urban
+-200 - odporność rurkowca
+tutaj np. droga z danzig do posen ma bazę 20, a postać ma współczynnik 0, co oznacza że rzut musi mieć co najmniej 20 aby postać nie zachorowała
+wypada 30
+postać jest tego dnia zdrowa itd.
+
+więcej skilli jutro pomyślę, ale tak wyglądają podstawy
+
+jakby coś brak walki bo 2 aksjo
+złamanie aksjo = przegrana
