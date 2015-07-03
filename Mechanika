@@ -1,5 +1,5 @@
 JBWA DER SPIEL 1
-NOTY PROJEKTOWE 0
+NOTY PROJEKTOWE 1
 Mikołaj Halber
 
 
@@ -45,5 +45,17 @@ postać jest tego dnia zdrowa itd.
 
 więcej skilli jutro pomyślę, ale tak wyglądają podstawy
 
-jakby coś brak walki bo 2 aksjo
-złamanie aksjo = przegrana
+WALKA
+Turowa, oparta na rzutach kostką (czytaj RPGowa)
+Główna postać nie walczy bo 2 akcjo
+Może wynająć NPCa do walki
+Dajmy sobie do tego np. Przeciętnego Sebę(PŻ 10,RKP 10[dajmy że rzuty obronne=RKP],atk 1k6)
+Jesteśmy atakowani przez jednego lewaka(RKP 5, atk 1k4,PŻ 4)
+Jak przegramy to tracimy 50% zasobów, albo udaje się nam uciec(rzut k100 na odporność na choroby z bazą 10)
+Seba atakuje Lewaka, trafia krytycznie bo wypadło mu 20, ale rzut na atak był niski bo 1, ale razy 2 bo krytyk
+Lewak ma 2 PŻ, atakuje Sebę Lewackim Krzykiem(czary, tutaj wypadałoby napisać jakieś spoko AI, dla NPCów)
+Seba traci 5 pkt ataku, atakuje lewaka, trafia za 5
+ZWYCIĘSTWO
+
+
+złamanie aksjo przez postać = przegrana
