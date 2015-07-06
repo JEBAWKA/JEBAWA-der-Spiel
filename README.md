@@ -1,2 +1,2 @@
 # JEBAWA-der-Spiel
-Oregon Trail w renesanso-fantasy akapie!
+Strategia ekonomiczna/RPG dla akapowych i nie tylko!
