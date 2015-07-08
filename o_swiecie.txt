@@ -29,4 +29,18 @@ Naszą postacią jest kupiec który właśnie rozpoczyna swoją
  szeregiem statystyk i cech. Zaczynamy z niewielką sumą pieniędzy,
  własnym wozem i prowiantem oraz pierwszymi towarami do sprzedania.
 
+Podstawy mechaniki:
+Słowem wstępu rżęlibyśmy połowę mechaniki z D&D
+Postacie w grze opisane są następującymi cechami:
+	Siła		Opisuje tężyznę fizyczną postaci – przykłady zastosowania: testy walki, konieczność odwalenia zagradzającego drogę drzewa
+	Zręczność	Opisuje szybkość giętkość postaci – przykłady zastosowania: Unik w walce, pokonywanie trudnego terenu (np. gołoborze, wiatrołom) 
+	Spryt		Opisuje inteligencje i zdolność kojarzenia – przykłady zastosowania: Test wiedzy, rozpoznawanie przedmiotu, wyceny. Wysoki spryt może np dawać dodatkowe opcje dialogowe czy odkrywać ukryte intencje rozmówców.
+	Charyzma	Czy postać ma gadane? – przykłady zastosowania: Esencja – testy handlu, przekonywania, targowania się etc.
+	Wola		Odporność psychiczna(?) i kwestie magii
+	Wytrzymałość	Ogólna odporność na niekorzystne czynniki – przykłady: Odporność na choroby, odporność na rany, przemęczenie.
+	Zdrowie	Ogólna liczbowa charakterystyka tego ile postać jeszcze uciągnie.
+Bazowa wartość każdej cechy wynosi 8 (zmienne w wypadku ras innych niż człowiek). Gracz ma do rozporządzenia pewną ilość punktów  cech, podbicie cechy o 1 pkt kosztuje w zależności od obecnej jej wartości. Cechy będzie można modyfikować w trakcie gry przez przedmioty, wydarzenia oraz doświadczenie.
+	Propozycja dodatkowa – wiek – Na początku rozgrywki gracz wybiera wiek postaci. Starsza postać ma większą szansę na choroby, mniejszą siłę, zręczność i wytrzymałość. Otrzymuje ona jednak większą ilość punktów umiejętności (patrz niżej)
 
+Zdolności 
+//zaraz napisze
