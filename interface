@@ -1,2 +1,40 @@
 //Tutaj będzie opis interfejsu gry, dostępnych okienek i interakcji
 z otoczeniem.
+---------------]MAPA ŚWIATA[-------------------
+Mapa świata podzielona jest na heksy, oglądamy ją w rzucie izometrycznym.
+Każde pole opisane jest w następujący sposób: ///Do rozwinięcia i modyfikacji
+-> TYP:
+	Opisuje ogólne właściwości pola oraz akcje jakie można na nim podjąć.
+	PRzykłady:
+		-Las 
+		-Rzeka
+		-Bagno
+		-Ścieżka
+		-Wieś
+		-Miasto
+		-Trawa
+		-góra
+		-pustynia
+	Każdy teren charakteryzowany jest przez:
+		Tempo poruszania się
+		ryzyko zdarzeń losowych
+		możliwe do postawienia konstrukcje
+		możliwe do podjęcia akcje
+		///Rozwinąć.
+-> Menu kontekstowe
+	Każdy heks możemy nacisnąc prawym przyciskiem myszy i uzyskać o nim 
+	informacje. Otworzy nam to również menu kontekstowe z boku ekranu
+	zawierające możliwe do dokonania akcje. Jeśli chodzi o najbardziej
+	podstawową akcje jaką jest ruch, wykonujemy po prostu zaznaczając wóz
+	i naciskając pole docelowe.
+	
+	Akcje do wykonania na polu na przykładzie lasu:
+	->Przejdź przez.
+	->Szukaj surowca (opał, zioła, jedzenie?)
+	->Kup teren
+	->rozpocznij wycinkę (wymaga robotników)
+	->Postaw tartak (jw.)
+-> Poruszanie się
+	Gracz przemieszcza wóz za pomocą prostego mechanizmu - naciska nań a 
+	potem na pole docelowe. (należy ofc zaimplementować wyszukiwanie 
+	ścieżek)
