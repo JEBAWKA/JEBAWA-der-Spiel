@@ -38,3 +38,34 @@ Każde pole opisane jest w następujący sposób: ///Do rozwinięcia i modyfikac
 	Gracz przemieszcza wóz za pomocą prostego mechanizmu - naciska nań a 
 	potem na pole docelowe. (należy ofc zaimplementować wyszukiwanie 
 	ścieżek)
+-> Kolejkowanie
+	Możliwe jest planowanie akcji i tworzenie kolejki np idź do A kup 
+	wełnę idź do B z postojem w C i sprzedaj wełnę. Kolejkę można np
+	reprezentować w górnej części ekranu (wide the Sims czy cuś)
+
+========={EKRAN POLA)==========
+
+Póki co chodzi głównie o miasta i wsie. Wejście na zabudowany teren umożliwia
+otwarcie ekranu miasta na którym dostępnie są różne miejscówki takie jak
+Sklep NPC 			- Handel rozmowa,
+Karczma				- rozmowa (zadania?) wynajem ludzi
+Burmistrz/czy co tam mają 	- Kupno gruntów
+Rynek				- Można wystawić swoje towary do sprzedarzy losowym postaciom
+Siedziba gildii			- Koncesje te sprawy?
+Zakłady				- Można je kupić albo postawić, generują dochód.
+
+++++++++]EKRAN KARAWANY[+++++++++
+Zawiera opis pojedynczej karawany. 
+- Wóz konie (muły, bazyliszki, pegazy? :P )
+- Opis postaci (odnośniki do ekranów postaci)
+- Wykaz surowców.
+-Opcje podrózy 
+	-Tempo
+	-Racje żywnościowe
+	-Funcje poszczególnych ludzi?
+===========[EKRAN POSTACI]=================
+
+-Metryczka
+-Statystyki
+-Opis? (generowany losowo w przypadku NPC?)
+-ekwipunek
