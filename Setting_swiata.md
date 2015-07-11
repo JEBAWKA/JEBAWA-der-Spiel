@@ -1,4 +1,4 @@
-O świecie gry - setting i mechanika
+O świecie gry - setting
 ====
 
 Swiat gry
