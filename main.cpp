@@ -1,6 +1,9 @@
+
 #include <iostream>
-int main(int arg, char* argc[])
-{
-  std::cout<<"Szczesc Boze"<<std::endl;
-  return 0;
+
+int main(int arg, char* argc[]){
+
+	std::cout<<"Akap Game v1.0"<<std::endl;
+
+	return 0;
 }
