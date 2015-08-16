@@ -1,0 +1,57 @@
+Czynniki kupna sprzeda¿y
+====
+
+Wstêp
+---
+
+Niniejsza notka zawiera opis podstawowych czynników warunkuj¹cych dokonanie transakcji
+w œwiecie gry a w szczególnoœci opisuje czynniki jakie wp³ywaj¹ na decyzje NPC w tej materii.
+W podwójnych nawiasach << >> umieszczam sugestie drugorzêdne którymi mo¿na zaj¹æ sie w póŸniejszym czasie.
+
+Skrótowo oznaczam w tekœcie:
+-NPC (NPC) - postaæ która pe³ni rolê producenta dóbr a kupuje by zapewniæ sobie ¿ycie.
+-NPT1 ( non playable trader) - postaæ bêd¹ca handlarzem, skupuje produkty i sprzedaje je w ni¿szych cenach ( a przynajmniej siê stara)
+Warunkiem koniecznym zajœcia transakcji jest:
+
+####Kontakt postacii - postacie dokonuj¹ce transakcji musz¹ byæ w kontakcie - znajdowaæ siê
+na tym samym heksie. <<Mo¿liwe s¹ inne sposoby np. listownie lub magicznie>>
+
+
+
+Opis NPC
+---
+
+W grze funkcjonuje na raz du¿a iloœæ NPC których zadaniem jest generowaæ popyt i poda¿. Postaci te dziel¹ siê na 
+wirtualnych NPC:
+	Postacie które nie istniej¹ na bierz¹co dla gracza tj. nie mo¿e explicite rozmawiaæ z nimi etc. mog¹ oni jednak
+	kupowaæ od postaci towary gdy ten wystawi je na targu.
+rzeczywistych NPC:
+	Postacie z którymi gracz mo¿e rozmawiaæ, wymieniaæ informacje zawieraæ znajomoœci etc. Wystêpuje ich zdecydowanie mniej
+	w œwiecie gry, maj¹ predefiniowane statystyki (co odró¿nia ich od wNPC gdy¿ statystyki tamtych s¹ generowane losowo na
+	potrzebê sytuacji) pe³ni¹ rolê typowych NPC z gier RPG.
+
+
+Ka¿da postaæ NPC mo¿e zostaæ opisana nastêpuj¹cym szablonem:
+
+**Archetyp** -- klasa do jakiej przypisana jest postaæ (definiuje listê potrzeb) 
+**Fundusze** -- kwota jak¹ postaæ posiada do wykorzystania w handlu.
+**majêtnoœæ**-- Ogólny opis tego jak postaæ jest zasobna wynika bazowo z archetypu zaœ
+w póŸniejszej fazie roœnie wraz z powodzeniem postaci. Przyk³adowo ch³op który uciu³a³ trochê pieniêdzy na zbo¿e
+na zimê mo¿e mieæ ich w pewnym momencie wiêcej ni¿ skryba który wyda³ wszystkie swoje oszczêdnoœci na ksi¹¿kê, posiada on jednak
+(ch³op) ni¿sz¹ majêtnoœæ gdy¿ ma mniejsze zarobki ni¿ skryba. (majêtnoœæ mo¿na przyrównaæ niejako do zdolnoœci kredytowej)
+Co istotne, postacie o wy¿szej majêtnoœci maj¹ wiêksz¹ tendencjê do kupowania produktów o wy¿szej jakoœci nawet jeœli s¹ one dro¿sze.
+**zadowolenie** - jest to zbiór kilku zmiennych opisuj¹cych to jak du¿e potrzeby trapi¹ postaæ.
+####g³ód
+####komfort
+####praca
+KA¿da z tych zmiennych opisuje to jak bardzo potrzebne s¹ przedmioty danej kategorii. W sytuacji kiedy przekrocz¹ one pewien pu³ap
+nastêpuje losowanie nowej potrzebnej rzeczy która uzyskuje priorytet kupna (dla uproszczenia, postaæ w ci¹gu jednej tury chce zakupiæ tylko jeden
+przedmiot z danej kategorii)
+Wa¿nym jest ¿e krytycznie wysokie wartoœci tych wskaŸników przedk³adaj¹ siê na ni¿sz¹ wydajnoœæ postaci a w dalszej przysz³oœci na œmieræ.
+<<**niechêæ** postaæ mo¿e mieæ coœ przeciwko konkretnej rasie (np. wojna) lub konkretnej osobie (zosta³a oszukana, okradziona etc.) wp³ywa to równie¿ na chêæ kupna.>>
+
+
+Pozosta³e czynniki nienale¿¹ce do postacii a wp³ywaj¹ce na szansê zakupu:
+**cena oferowana przez handlarza**
+**poziom umiejêtnoœci negocjacyjnych handlarza**
+<<**efekty specjalne (np uroki, eventy.)**>>
