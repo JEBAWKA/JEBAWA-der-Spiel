@@ -79,10 +79,10 @@ int kupowaniePrzedmiotu(int nrKupowanegoPrzedmiotu, int nrKupujacejPostaci){
 
 int Kupowanie(int nrPostaci){
 	bool ifBuying = true;
+	int nrPrzedmiotu = 1;
 	while (ifBuying){
 		double randomNumber = rand() % 100;
 		if (randomNumber < poziomPotrzeby[nrPostaci]){
-			int nrPrzedmiotu = 1;
 			kupowaniePrzedmiotu(nrPrzedmiotu, nrPostaci);
 			nrPrzedmiotu++;
 		}
