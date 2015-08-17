@@ -32,7 +32,7 @@ rzeczywistych NPC:
 
 
 Ka¿da postaæ NPC mo¿e zostaæ opisana nastêpuj¹cym szablonem:
-
+>>>>>Rasa ma wp³yw na zapotrzebowanie
 **Archetyp** -- klasa do jakiej przypisana jest postaæ (definiuje listê potrzeb) 
 **Fundusze** -- kwota jak¹ postaæ posiada do wykorzystania w handlu.
 **majêtnoœæ**-- Ogólny opis tego jak postaæ jest zasobna wynika bazowo z archetypu zaœ
@@ -43,13 +43,20 @@ Co istotne, postacie o wy¿szej majêtnoœci maj¹ wiêksz¹ tendencjê do kupowania pr
 **zadowolenie** - jest to zbiór kilku zmiennych opisuj¹cych to jak du¿e potrzeby trapi¹ postaæ.
 ####g³ód
 ####komfort
+####potrzeby_duchowe
 ####praca
+
+####Implementacja piramidy Maslowa (hierarchizacja potrzeb)
+
+( i w sytuacji gdy te trzy podstawowe s¹ bardziej zaspokajane to te potrzeby duchowe rosn¹ na znaczeniu)
+
 KA¿da z tych zmiennych opisuje to jak bardzo potrzebne s¹ przedmioty danej kategorii. W sytuacji kiedy przekrocz¹ one pewien pu³ap
 nastêpuje losowanie nowej potrzebnej rzeczy która uzyskuje priorytet kupna (dla uproszczenia, postaæ w ci¹gu jednej tury chce zakupiæ tylko jeden
 przedmiot z danej kategorii)
 Wa¿nym jest ¿e krytycznie wysokie wartoœci tych wskaŸników przedk³adaj¹ siê na ni¿sz¹ wydajnoœæ postaci a w dalszej przysz³oœci na œmieræ.
-<<**niechêæ** postaæ mo¿e mieæ coœ przeciwko konkretnej rasie (np. wojna) lub konkretnej osobie (zosta³a oszukana, okradziona etc.) wp³ywa to równie¿ na chêæ kupna.>>
+<<**nastawienie** postaæ mo¿e mieæ coœ przeciwko konkretnej rasie (np. wojna) lub konkretnej osobie (zosta³a oszukana, okradziona etc.) wp³ywa to równie¿ na chêæ kupna.>>
 
+///Wp³yw zale¿ny od typu sprzedawanego przedmiotu (rzadkoœæ, dobra nietypowe)
 
 Pozosta³e czynniki nienale¿¹ce do postacii a wp³ywaj¹ce na szansê zakupu:
 **cena oferowana przez handlarza**

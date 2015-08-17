@@ -1,4 +1,4 @@
-SUROWCE
+﻿SUROWCE
 ====
 
 Wstęp
@@ -60,6 +60,11 @@ Przykłady:
 
 *metoda uzyskiwania : (farma) -> warzywa
 
+**nabiał**
+
+-syr
+-jajka
+-mleko
 
 Przykłady:
 
@@ -123,17 +128,39 @@ materiały
 --
 Każdy z tych produktów stanowi odrębną klasę
 
+**szyby**
+
 **drewno**
+
+**ręce do pracy**
+
+**cegły**
 
 **zboże**
 
 **mąka**
+
+**węgiel**
+
+**siarka**
+
+**ołowiu**
+
+**miedź**
+
+**cyna**
 
 **żelazo**
 
 **złoto**
 
 **srebro**
+
+pochodne:
+
+**brąz**
+
+**stal**
 
 **kamienie szlachetne**
 
@@ -153,10 +180,29 @@ Każdy z tych produktów stanowi odrębną klasę
 
 *wełniane
 
+Komponenty alchemiczne
+--
+
+**Rtęć**
+
+**arszenik**
+
+**bezoar**
+
+**vitriol**
+
+
+
 wytwory metalowe
 --
 
 **narzędzia**
+
+**AGD**
+
+**meble**
+
+
 
 **broń**
 
@@ -171,8 +217,28 @@ to samo
 
 świetna lokata kapitału.
 
+**zwierze pociągowe**
+
+*kuń
+*jednoróg
+*wół
+*krasnoludzki techmagiczny wóz pociągowy
+*muł
+*gryf
+*słonie
+
+**inwentarz żywy**
+
+*krowy
+*owce
+*kury
+*beholder
+
 
 Lista nie jest pełna i można do niej jeszcze dopisać parę rzeczy. Nie pisałem łańcuchów produkcyjnych
 bo w większości wypadków zdają się być oczywiste.
+
+Znacznik - przedmiot luksusowy
+//Zbiór przedmiotów ze wszystkich kategorii o bardzo wysokiej jakości 
 
 ///Jacek Kurek

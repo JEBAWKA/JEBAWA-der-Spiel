@@ -1,4 +1,4 @@
-Podstawy mechaniki
+﻿Podstawy mechaniki
 ====
 
 Słowem wstępu rżęlibyśmy połowę mechaniki z D&D.
@@ -7,6 +7,13 @@ Test
 ---
 
 Test x o stopniu trudności y oznacza że bieżemy  wartość zdolności/cechy x, dodajemy do niej k20 i sprawdzamy czy wynik jest większy równy y - jeśli tak to test jest zdany.
+W ogólności
+test zdany <==> poziom_trudności <= k20 + poz_um + modyf_cech + mod_syt
+legenda:
+poziom_trudności - zależny od wykonywanej czynności, tym wyższy im trudniejsza np. p_t leczenia powierzchownej rany 8 zaś ciężko rannej postaci 17.
+poz_um - poziom umiejętności testowanej (lub cechy)
+modyf_cech - bonus od wysokiej wartości cechy związanej z daną umiejętnością
+mod_syt - wszystkie bonusy i kary typu "twoja postać jest ranna -2 do testów" "Posiadasz magiczne zioła + 3 do leczenia" etc.
 
 Cechy
 ---
