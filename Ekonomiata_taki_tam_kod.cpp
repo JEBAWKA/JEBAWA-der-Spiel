@@ -4,7 +4,6 @@
 ////
 // AuAx v 0.0001 test1.cpp
 //
-#include "stdafx.h"
 #include "cstdlib"
 #include "iostream"
 #include "ctime"
