@@ -3,10 +3,16 @@
 
 #include <unordered_map>
 #include "coord.h"
+#include "hex.hpp"
 
-class Hex
+enum class : char  DIRECTION
 {
-
+    N = 0,
+    NE= 1,
+    SE= 2,
+    S = 3,
+    SW= 4,
+    NW= 5,
 };
 
 struct KeyHasher
