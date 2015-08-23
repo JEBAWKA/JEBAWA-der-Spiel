@@ -4,9 +4,9 @@
 struct Coord // koordynaty hexa
 {
     int x, y, z;
-    Key(int x, int y, int z) : x(x), y(y), z(z) {} // konstruktor
+    Coord(int x, int y, int z) : x(x), y(y), z(z) {}
 
-    bool operator==(const Key &other) const
+    bool operator==(const Coord &other) const
     {
         return (x == other.x && y == other.y && z == other.z);
     }
