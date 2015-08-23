@@ -4,12 +4,17 @@
 #include <unordered_map>
 #include "coord.h"
 
+class Hex
+{
+
+};
+
 struct KeyHasher
 {
     const int c = 1000; // wartosc wieksza niz bok mapy i c^3 < max unsigned long size
-    std::size_t operator()(const Key& k) const
+    std::size_t operator()(const Coord& k) const
     {
-        return static_cast<std::size_t>(x + (y*c) + (z*c*c));
+        return static_cast<std::size_t>(k.x + (k.y*c) + (k.z*c*c));
     }
 };
 
