@@ -10,7 +10,7 @@ struct Coord // koordynaty hexa
     {
         return (x == other.x && y == other.y && z == other.z);
     }
-    Coord operator+(const Coord &other)
+    Coord operator+(const Coord &other) const
     {
         return Coord(x + other.x, y + other.y, z + other.z);
     }
