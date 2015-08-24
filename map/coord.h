@@ -3,8 +3,9 @@
 
 struct Coord // koordynaty hexa
 {
-    int x, y, z;
-    Coord(int x, int y, int z) : x(x), y(y), z(z) {}
+    short x, y, z;
+    Coord() {} // lepiej uzywac konstruktora przypisujacego od razu wartosci
+    Coord(short x_, short y_, short z_) : x(x_), y(y_), z(z_) {}
 
     bool operator==(const Coord &other) const
     {
@@ -19,6 +20,17 @@ struct Coord // koordynaty hexa
         x += other.x;
         y += other.y;
         z += other.z;
+        return *this;
+    }
+    Coord operator-(const Coord &other) const
+    {
+        return Coord(x - other.x, y - other.y, z - other.z);
+    }
+    Coord& operator-=(const Coord &other)
+    {
+        x -= other.x;
+        y -= other.y;
+        z -= other.z;
         return *this;
     }
 };
