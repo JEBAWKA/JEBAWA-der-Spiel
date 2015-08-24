@@ -39,6 +39,10 @@ public:
     {
         tags.remove(tag);
     }
+    Coord get_coord()
+    {
+        return this->coord;
+    }
     /*void add_building(Building bld)
     {
         buildings.push_front(bld);
