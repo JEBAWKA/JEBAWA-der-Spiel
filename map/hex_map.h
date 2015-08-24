@@ -3,9 +3,9 @@
 
 #include <unordered_map>
 #include "coord.h"
-#include "hex.hpp"
+#include "hex.h"
 
-enum class : char  DIRECTION
+enum class DIRECTION : char
 {
     // lepiej usunac przypisywanie numerkow i zostawic to kompilatorowi
     N  = 0,
