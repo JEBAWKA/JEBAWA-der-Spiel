@@ -7,12 +7,13 @@
 
 enum class : char  DIRECTION
 {
-    N = 0,
-    NE= 1,
-    SE= 2,
-    S = 3,
-    SW= 4,
-    NW= 5,
+    // lepiej usunac przypisywanie numerkow i zostawic to kompilatorowi
+    N  = 0,
+    NE = 1,
+    SE = 2,
+    S  = 3,
+    SW = 4,
+    NW = 5
 };
 
 struct KeyHasher
