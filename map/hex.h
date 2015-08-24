@@ -1,5 +1,5 @@
-#ifndef HEX_HPP
-#define HEX_HPP
+#ifndef HEX_H
+#define HEX_H
 
 #include <list>
 #include "coord.h"
@@ -64,4 +64,4 @@ public:
     }*/
 };
 
-#endif // HEX_HPP
+#endif // HEX_H
