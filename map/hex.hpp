@@ -2,6 +2,7 @@
 #define HEX_H
 
 #include <list>
+#include "coord.h"
 
 enum class : char TERRAIN_TYPE
 {
@@ -61,6 +62,6 @@ public:
     {
         active_events.remove(event);
     }*/
-
 };
+
 #endif // HEX_MAP_H
