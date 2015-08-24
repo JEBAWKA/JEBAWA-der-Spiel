@@ -8,12 +8,12 @@
 enum class DIRECTION : char
 {
     // lepiej usunac przypisywanie numerkow i zostawic to kompilatorowi
-    N  = 0,
-    NE = 1,
-    SE = 2,
-    S  = 3,
-    SW = 4,
-    NW = 5
+    N ,
+    NE,
+    SE,
+    S ,
+    SW,
+    NW
 };
 
 struct KeyHasher
@@ -31,6 +31,9 @@ class Hex_map
 
 public:
     Hex_map();
+    Coord find_neighbour(DIRECTION dir);
+    int distance(Hex &first,Hex &second);
+
 };
 
 #endif // HEX_MAP_H

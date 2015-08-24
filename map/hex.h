@@ -30,7 +30,9 @@ class Hex
     //Dodac Eventy i budynki.
 
 public:
-    Hex(Coord coord) : coord(coord) {} // konstruktor
+    Hex(){};
+    Hex(Coord coord) : coord(coord){} // konstruktor
+    Hex(int x,int y,int z)
     void add_tag(TERRAIN_TYPE tag);
     void remove_tag(TERRAIN_TYPE tag);
     Coord get_coord();
