@@ -10,7 +10,7 @@
 
 class Hex_map
 {
-    std::vector<std::vector<std::pair<bool, std::shared_ptr<Hex>>>  map;
+    std::vector<std::vector<std::pair<bool, std::shared_ptr<Hex>>>> map;
     std::list <Hex> hexes;
     Hex get_hex_copy(Coord coord); // lepiej nie uzywac
     Coord find_neighbour(Coord hex, Coord direction); // niebezpieczna - nie wiadomo czy hex istnieje
