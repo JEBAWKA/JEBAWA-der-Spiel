@@ -6,7 +6,8 @@ Hex_map::Hex_map() {}
 
 void Hex_map::set_size(int x, int y)
 {
-    this->map.resize(y, std::vector<std::pair<bool, std::shared_ptr<Hex>>(x, std::make_pair(false, nullptr)));
+    auto row = std::vector<std::pair<bool, std::shared_ptr<Hex>>>(x, std::make_pair(false, nullptr));
+    this->map.resize(y, row);
 }
 
 Hex_map::Hex_map(int x, int y)
@@ -44,18 +45,18 @@ Coord Hex_map::find_neighbour(std::shared_ptr<Hex> hex, Coord direction)
     return find_neighbour(hex->get_coord(), direction);
 }
 
-std::shared_ptr<hex> Hex_map::find_neighbour_ptr(Coord hex, Coord direction) // podstawowa
+std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(Coord hex, Coord direction) // podstawowa
 {
     auto neigbour_coord = find_neighbour(hex, direction);
     return map[neigbour_coord.x][neigbour_coord.y].second;
 }
 
-std::shared_ptr<hex> Hex_map::find_neighbour_ptr(Hex hex, Coord direction)
+std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(Hex hex, Coord direction)
 {
     return find_neighbour_ptr(hex.get_coord(), direction);
 }
 
-std::shared_ptr<hex> Hex_map::find_neighbour_ptr(std::shared_ptr<Hex> hex, Coord direction)
+std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(std::shared_ptr<Hex> hex, Coord direction)
 {
     return find_neighbour_ptr(hex->get_coord(), direction);
 }
