@@ -1,6 +1,5 @@
 #ifndef HEX_MAP_H
 #define HEX_MAP_H
-#define N Coord(
 #include <unordered_map>
 #include <memory>
 #include <utility>
