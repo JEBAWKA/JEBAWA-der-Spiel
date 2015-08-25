@@ -1,7 +1,7 @@
 #ifndef COORD_H
 #define COORD_H
 
- * struct Coord // koordynaty hexa
+struct Coord // koordynaty hexa
 {
     short x, y;
     Coord() {} // lepiej uzywac konstruktora przypisujacego od razu wartosci
