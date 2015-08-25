@@ -72,3 +72,23 @@ Hex Hex_map::get_hex_copy(Coord coord) // lepiej nie uzywac
 {
     return *map[coord.x][coord.y].second;
 }
+
+std::shared_ptr<Hex> Hex_map::add_hex(Coord coord)
+{
+   hexes.push_back( Hex(coord) ); // dodaje na koniec nowy hex o podanych koordynatach
+   map[coord.x][coord.y].first = true; // ustawia flage na istniejacego hexa
+   map[coord.x][coord.y].second = std::make_shared<Hex>(hexes.back()); // przypisuje pointer na nowego hexa
+   return map[coord.x][coord.y].second; // zwraca shared_ptr na nowego hexa
+}
+
+bool Hex_map::remove_hex(Coord coord)
+{
+    if(map[coord.x][coord.y].first == false)
+    {
+        return false; // nie mozna usunac nieistniejacego obiektu
+    }
+    map[coord.x][coord.y].first = false; // ustawia flage na puste pole
+    map[coord.x][coord.y].second.reset(); // usuwa trzymany obiekt
+    map[coord.x][coord.y].second = nullptr; // i ustawia na nullptr
+    return true;
+}

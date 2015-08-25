@@ -30,7 +30,7 @@ public:
     int distance(std::shared_ptr<Hex> first, std::shared_ptr<Hex> second);
     Coord find_neighbour(Hex hex, Coord direction);
     Coord find_neighbour(std::shared_ptr<Hex> hex, Coord direction);
-    std::shared_ptr<Hex> find_neighbour_ptr(Hex hex, Coord direction); // podstawowa
+    std::shared_ptr<Hex> find_neighbour_ptr(Hex hex, Coord direction);
     std::shared_ptr<Hex> find_neighbour_ptr(std::shared_ptr<Hex> hex, Coord direction);
 };
 
