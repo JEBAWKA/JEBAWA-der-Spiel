@@ -32,7 +32,7 @@ class Hex
 public:
     Hex(){};
     Hex(Coord coord) : coord(coord){} // konstruktor
-    Hex(int x,int y,int z)
+    Hex(int x,int y)
     void add_tag(TERRAIN_TYPE tag);
     void remove_tag(TERRAIN_TYPE tag);
     Coord get_coord();
