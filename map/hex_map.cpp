@@ -60,8 +60,7 @@ Coord Hex_map::find_neighbour(std::shared_ptr<Hex> hex, DIRECTION direction)
 
 std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(Coord hex, Coord direction) // podstawowa
 {
-    auto neigbour_coord = find_neighbour(hex, direction);
-    return map[neigbour_coord.x][neigbour_coord.y].second;
+    return get_pair_ref(find_neighbour(hex, direction)).second;
 }
 
 std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(Hex hex, DIRECTION direction)
@@ -76,16 +75,16 @@ std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(std::shared_ptr<Hex> hex, DIREC
 
 Hex Hex_map::get_hex_copy(Coord coord) // lepiej nie uzywac
 {
-    return *map[coord.x][coord.y].second;
+    return *get_pair_ref(coord).second;
 }
 
 std::shared_ptr<Hex> Hex_map::add_hex(Hex hex) //podstawowa, zwraca wskaznik na dodanego heksa
 {
-    auto coord = hex.get_coord();
+    auto pair_hex = get_pair_ref(hex.get_coord());
     hexes.push_back(hex); // dodaje na koniec nowy hex o podanych koordynatach
-    map[coord.x][coord.y].first = true; // ustawia flage na istniejacego hexa
-    map[coord.x][coord.y].second = std::make_shared<Hex>(hexes.back()); // przypisuje pointer na nowego hexa
-    return map[coord.x][coord.y].second; // zwraca shared_ptr na nowego hexa
+    pair_hex.first = true; // ustawia flage na istniejacego hexa
+    pair_hex.second = std::make_shared<Hex>(hexes.back()); // przypisuje pointer na nowego hexa
+    return pair_hex.second; // zwraca shared_ptr na nowego hexa
 }
 
 std::shared_ptr<Hex> Hex_map::add_hex(Coord coord)
@@ -95,15 +94,15 @@ std::shared_ptr<Hex> Hex_map::add_hex(Coord coord)
 
 bool Hex_map::remove_hex(Hex hex) // podstawowa, zwraca czy udalo sie usunac
 {
-    auto coord = hex.get_coord();
-    if(map[coord.x][coord.y].first == false)
+    auto pair_hex = get_pair_ref(hex.get_coord());
+    if(pair_hex.first == false)
     {
         return false; // nie mozna usunac nieistniejacego obiektu
     }
     hexes.remove(hex); // usuwa wlasciwy obiekt z listy
-    map[coord.x][coord.y].first = false; // ustawia flage na puste pole
-    map[coord.x][coord.y].second.reset(); // resetuje wskaznik
-    map[coord.x][coord.y].second = nullptr; // i ustawia na nullptr
+    pair_hex.first = false; // ustawia flage na puste pole
+    pair_hex.second.reset(); // resetuje wskaznik
+    pair_hex.second = nullptr; // i ustawia na nullptr
     return true;
 }
 
@@ -155,7 +154,7 @@ bool Hex_map::is_coord_within_map(Coord coord) // czy dane koordynaty naleza do 
 
 bool Hex_map::hex_exists(Coord coord) // czy hex o podanych koordynatach istnieje
 {
-    return map[coord.x][coord.y].first; // zwraca flage informujaca czy hex istnieje
+    return get_pair_ref(coord).first; // zwraca flage informujaca czy hex istnieje
 }
 
 std::shared_ptr<Hex> Hex_map::get_hex_ptr(Coord coord)
