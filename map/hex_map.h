@@ -8,6 +8,16 @@
 #include "coord.h"
 #include "hex.h"
 
+enum class DIRECTION : char
+{
+    N = 0,
+    NE,
+    SE,
+    S,
+    SW,
+    NW
+};
+
 class Hex_map
 {
     int size_x, size_y;
@@ -20,8 +30,15 @@ class Hex_map
     Coord find_neighbour(Coord hex, Coord direction); // podstawowa
     std::shared_ptr<Hex> find_neighbour_ptr(Coord hex, Coord direction); // podstawowa
 
+    // tej lepiej nie uzywac
+    std::vector<std::shared_ptr<Hex>> get_neighbours(Coord hex); // podstawowa
+
     bool is_coord_within_map(Coord coord); // czy dane koordynaty naleza do planszy
     bool hex_exists(Coord coord); // czy hex o podanych koordynatach istnieje
+
+    // zwraca referencje do pary z kontenera map
+    std::pair<bool, std::shared_ptr<Hex>>& get_pair_ref(Coord coord);
+
 public:
     void set_size(int x, int y);
     Hex_map();
@@ -34,13 +51,12 @@ public:
     int distance(Coord first, Coord second); // podstawowa
     int distance(Hex first, Hex second);
     int distance(std::shared_ptr<Hex> first, std::shared_ptr<Hex> second);
-    Coord find_neighbour(Hex hex, Coord direction);
-    Coord find_neighbour(std::shared_ptr<Hex> hex, Coord direction);
-    std::shared_ptr<Hex> find_neighbour_ptr(Hex hex, Coord direction);
-    std::shared_ptr<Hex> find_neighbour_ptr(std::shared_ptr<Hex> hex, Coord direction);
+    Coord find_neighbour(Hex hex, DIRECTION direction);
+    Coord find_neighbour(std::shared_ptr<Hex> hex, DIRECTION direction);
+    std::shared_ptr<Hex> find_neighbour_ptr(Hex hex, DIRECTION direction);
+    std::shared_ptr<Hex> find_neighbour_ptr(std::shared_ptr<Hex> hex, DIRECTION direction);
 
     // tych lepiej nie uzywac
-    std::vector<std::shared_ptr<Hex>> get_neighbours(Coord hex); // podstawowa
     std::vector<std::shared_ptr<Hex>> get_neighbours(Hex hex);
     std::vector<std::shared_ptr<Hex>> get_neighbours(std::shared_ptr<Hex> hex);
 

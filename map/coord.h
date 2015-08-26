@@ -1,8 +1,6 @@
 #ifndef COORD_H
 #define COORD_H
 
-#include <array>
-
 struct Coord // koordynaty hexa
 {
     short x, y;

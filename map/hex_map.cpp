@@ -1,24 +1,15 @@
 #include "hex_map.h"
 
 #include <cmath>
+#include <map>
 
-enum class DIRECTION : char
-{
-    N = 0,
-    NE,
-    SE,
-    S,
-    SW,
-    NW
-};
-
-std::array<Coord, 6> direction_movement = {
-    Coord( 0, -1), // N
-    Coord(+1,  0), // NE
-    Coord(+1, +1), // SE
-    Coord( 0, +1), // S
-    Coord(-1, +1), // SW
-    Coord(-1,  0)  // NW
+std::map<DIRECTION, Coord> direction_movement = {
+    {DIRECTION::N,  Coord( 0, -1)},
+    {DIRECTION::NE, Coord(+1,  0)},
+    {DIRECTION::SE, Coord(+1, +1)},
+    {DIRECTION::S,  Coord( 0, +1)},
+    {DIRECTION::SW, Coord(-1, +1)},
+    {DIRECTION::NW, Coord(-1,  0)}
 };
 
 Hex_map::Hex_map() {}
@@ -36,7 +27,10 @@ Hex_map::Hex_map(int x, int y) : size_x(x), size_y(y)
 
 int Hex_map::distance(Coord first, Coord second) // podstawowa
 {
-    return sqrt((second.x-first.x)*(second.x-first.x)+(second.y-first.y)*(second.y-first.y)); // twierdzenie pitagorasa a^2+b^2 = c^2
+    // twierdzenie pitagorasa a^2+b^2 = c^2
+    double a = (static_cast<double>(second.x) - static_cast<double>(first.x));
+    double b = (static_cast<double>(second.y) - static_cast<double>(first.y));
+    return round(sqrt( a*a + b*b ));
 }
 
 int Hex_map::distance(Hex first, Hex second)
@@ -51,17 +45,17 @@ int Hex_map::distance(std::shared_ptr<Hex> first, std::shared_ptr<Hex> second)
 
 Coord Hex_map::find_neighbour(Coord hex, Coord direction) // podstawowa
 {
-    return hex + direction; // direction jest typu coord? w sumie to bardzo wygodne
+    return hex + direction;
 }
 
-Coord Hex_map::find_neighbour(Hex hex, Coord direction)
+Coord Hex_map::find_neighbour(Hex hex, DIRECTION direction)
 {
-    return find_neighbour(hex.get_coord(), direction);
+    return find_neighbour(hex.get_coord(), direction_movement[direction]);
 }
 
-Coord Hex_map::find_neighbour(std::shared_ptr<Hex> hex, Coord direction)
+Coord Hex_map::find_neighbour(std::shared_ptr<Hex> hex, DIRECTION direction)
 {
-    return find_neighbour(hex->get_coord(), direction);
+    return find_neighbour(hex->get_coord(), direction_movement[direction]);
 }
 
 std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(Coord hex, Coord direction) // podstawowa
@@ -70,14 +64,14 @@ std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(Coord hex, Coord direction) // 
     return map[neigbour_coord.x][neigbour_coord.y].second;
 }
 
-std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(Hex hex, Coord direction)
+std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(Hex hex, DIRECTION direction)
 {
-    return find_neighbour_ptr(hex.get_coord(), direction);
+    return find_neighbour_ptr(hex.get_coord(), direction_movement[direction]);
 }
 
-std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(std::shared_ptr<Hex> hex, Coord direction)
+std::shared_ptr<Hex> Hex_map::find_neighbour_ptr(std::shared_ptr<Hex> hex, DIRECTION direction)
 {
-    return find_neighbour_ptr(hex->get_coord(), direction);
+    return find_neighbour_ptr(hex->get_coord(), direction_movement[direction]);
 }
 
 Hex Hex_map::get_hex_copy(Coord coord) // lepiej nie uzywac
@@ -125,15 +119,21 @@ bool Hex_map::remove_hex(Coord coord)
 
 std::vector<std::shared_ptr<Hex>> Hex_map::get_neighbours(Coord hex) // podstawowa
 {
-    std::vector<std::shared_ptr<Hex>> neigbours = {};
-    for(auto dir : direction_movement)
+    std::vector<std::shared_ptr<Hex>> neighbours = {};
+    std::vector<Coord> directions = {};
+    for(auto p : direction_movement)
+    {
+        directions.push_back(p.second);
+    }
+
+    for(auto dir : directions)
     {
         if(hex_exists(hex + dir))
         {
-            neigbours.push_back( get_hex_ptr(hex + dir) );
+            neighbours.push_back( get_hex_ptr(hex + dir) );
         }
     }
-    return neigbours;
+    return neighbours;
 }
 
 std::vector<std::shared_ptr<Hex>> Hex_map::get_neighbours(Hex hex)
@@ -160,5 +160,10 @@ bool Hex_map::hex_exists(Coord coord) // czy hex o podanych koordynatach istniej
 
 std::shared_ptr<Hex> Hex_map::get_hex_ptr(Coord coord)
 {
-    return map[coord.x][coord.y].second; // zwraca wskaznik
+    return get_pair_ref(coord).second; // zwraca wskaznik
+}
+
+std::pair<bool, std::shared_ptr<Hex>>& Hex_map::get_pair_ref(Coord coord)
+{
+    return map[coord.y][coord.x];
 }
