@@ -11,7 +11,7 @@ void Hex::remove_tag(TERRAIN_TYPE tag)
     tags.remove(tag);
 }
 
-Coord Hex::get_coord()
+Coord Hex::get_coord() const
 {
     return this->coord;
 }

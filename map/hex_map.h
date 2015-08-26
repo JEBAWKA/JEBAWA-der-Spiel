@@ -26,8 +26,11 @@ public:
     void set_size(int x, int y);
     Hex_map();
     Hex_map(int x, int y);
-    std::shared_ptr<Hex> add_hex(Coord where); //Zwraca wskaznik na dodanego heksa.
-    bool remove_hex(Coord where); //Zwraca czy udalo sie usunac;
+    std::shared_ptr<Hex> add_hex(Hex hex); //podstawowa, zwraca wskaznik na dodanego heksa
+    std::shared_ptr<Hex> add_hex(Coord coord);
+    bool remove_hex(Hex hex); // podstawowa, zwraca czy udalo sie usunac
+    bool remove_hex(Coord coord);
+    bool remove_hex(std::shared_ptr<Hex> hex);
     int distance(Coord first, Coord second); // podstawowa
     int distance(Hex first, Hex second);
     int distance(std::shared_ptr<Hex> first, std::shared_ptr<Hex> second);

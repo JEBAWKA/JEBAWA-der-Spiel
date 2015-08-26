@@ -35,13 +35,22 @@ public:
     Hex(int x, int y);
     void add_tag(TERRAIN_TYPE tag);
     void remove_tag(TERRAIN_TYPE tag);
-    Coord get_coord();
+    Coord get_coord() const;
     /*
     void add_building(Building bld);
     void remove_building(Building bld);
     void add_event(Event event);
     void remove_event(Event event);
     */
+
+    bool operator==(const Coord &other) const
+    {
+        return this->coord == other;
+    }
+    bool operator==(const Hex &other) const
+    {
+        return this->coord == other.get_coord();
+    }
 };
 
 #endif // HEX_H
