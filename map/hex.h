@@ -11,7 +11,7 @@ enum class TERRAIN_TYPE : char
     RIVER = 2,
     SWAMP = 3,
     ROAD = 4,
-    VILLIGE = 5,
+    VILLAGE = 5,
     TOWN = 6,
     GRASS = 7,
     MOUNTAIN = 8,
